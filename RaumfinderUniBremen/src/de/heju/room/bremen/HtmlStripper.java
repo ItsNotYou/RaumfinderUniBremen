@@ -22,8 +22,8 @@ public class HtmlStripper {
 		TagNode node = null;
 		try {
 			node = cleaner.clean(new URL(requesturl));
-			Object[] mapNodes = node.evaluateXPath("//*[@id=\"middle\"]/table[1]/tbody/tr[5]/td/div/div[1]");
-			Object[] crosshairNodes = node.evaluateXPath("//*[@id=\"r9463\"]");
+			Object[] mapNodes = node.evaluateXPath("//img[@style='left:0px;top:0px;']/..");
+			Object[] crosshairNodes = node.evaluateXPath("//input[@src='http://oracle-web.zfn.uni-bremen.de/images/fadenkreuz.gif']/..");
 
 			result.setMap((TagNode) mapNodes[0]);
 			result.setCrosshair((TagNode) crosshairNodes[0]);

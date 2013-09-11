@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class RoomMapFragment extends Fragment implements RoomFindable {
 
@@ -88,7 +87,7 @@ public class RoomMapFragment extends Fragment implements RoomFindable {
 			view.getSettings().setUseWideViewPort(true);
 			view.setVisibility(View.VISIBLE);
 
-			Toast.makeText(getActivity(), result.getUrl(), Toast.LENGTH_LONG).show();
+			publishProgress("");
 		}
 	}
 }
