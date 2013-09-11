@@ -1,10 +1,9 @@
 package de.heju.room.bremen;
 
-import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
+import android.os.Bundle;
 
-public class Roomviewer extends Activity {
+public class Roomviewer extends Activity implements RoomFindable {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -13,10 +12,8 @@ public class Roomviewer extends Activity {
 	}
 
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.roomviewer, menu);
-		return true;
+	public void requestRoomFinding(RoomFindingRequest request) {
+		RoomMapFragment map = (RoomMapFragment) getFragmentManager().findFragmentById(R.id.room_map_fragment);
+		map.requestRoomFinding(request);
 	}
-
 }

@@ -21,7 +21,7 @@ public class HtmlStripper {
 		HtmlCleaner cleaner = new HtmlCleaner();
 		TagNode node = null;
 		try {
-			node = cleaner.clean(new URL("http://oracle-web.zfn.uni-bremen.de/lageplan/lageplan?haus=GW2&raum=B1215&pi_anz=2"));
+			node = cleaner.clean(new URL(requesturl));
 			Object[] mapNodes = node.evaluateXPath("//*[@id=\"middle\"]/table[1]/tbody/tr[5]/td/div/div[1]");
 			Object[] crosshairNodes = node.evaluateXPath("//*[@id=\"r9463\"]");
 

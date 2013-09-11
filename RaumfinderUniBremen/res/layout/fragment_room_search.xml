@@ -7,22 +7,28 @@
     <Spinner
         android:id="@+id/room_search_building"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_weight="0" />
 
     <EditText
         android:id="@+id/room_search_room"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Raumnummer"
         android:inputType="text"
-        android:hint="Raumnummer" >
+        android:imeActionId="@+id/room_search_start"
+        android:imeOptions="actionUnspecified"
+        android:imeActionLabel="Los!" >
 
         <requestFocus />
     </EditText>
 
     <Button
-        android:id="@+id/room_seach_start"
+        android:id="@+id/room_search_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="0"
         android:text="Suchen" />
 
 </LinearLayout>
